@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper-outer {
+  margin: 5rem 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  } 25% {
+    transform: translateX(-500%);
+  } 50% {
+    transform: translateX(-1000%);
+  } 75% {
+    transform: translateX(-1500%);
+  } 100% {
+    transform: translateX(0);
+  }
+}
+
+.carousel {
+  overflow: hidden;
+  padding: 2rem 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.carousel:before,
+.carousel:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.carousel:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #222529);
+}
+
+.carousel:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #222529);
+}
+
+.carousel:hover .carousel-slide {
+  animation-play-state: paused;
+}
+
+.carousel-slide {
+  display: inline-block;
+  animation: 40s slide infinite linear;
+}
+
+.carousel-slide img {
+  max-width: 100%;
+  width: 15rem;
+}
+
+#upperSection{
+  padding: 5rem;
+}
+
+.poster > a > img{
+  max-width: 250px;
+  border-radius: 0.5rem;
+}
+
+.card .card-img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);  
+  padding: 10px; 
+  width: 100%; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-end; 
+  opacity: 0; 
+  transition: opacity 0.3s; 
+}
+
+.rating-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2; 
+}
+
+.card .card-img-overlay .card-title,
+.card .card-img-overlay .card-text {
+  font-size: 14px; 
+}
+
+.card:hover .card-img-overlay {
+  opacity: 1; 
+}
+
+.nav-item > a {
+  color: #EAEAEA;
+  font-weight: normal;
+  transition: all 0.5s ease-in-out; 
+}
+
+.nav-item > a:hover {
+  color: #FF2E63;
+  font-weight: bold;
+}
+
+.nav-item {
+  background-color: #FF2E63;
+  border-radius: 1rem;
+  margin: 1rem 0.5rem;
+}
+
+.nav-item:hover {
+  background-color: #EAEAEA;
+}
+
+.card-custom {
+  margin: 2rem 0;
+  box-shadow: 0 4px 8px 0 rgba(255, 46, 99, 1);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.navbar-brand > img {
+  width: 2rem;
+  height: auto;
+}
+
+#inputSearchBar {
+  width: 20rem;
+  height: auto;
+  border: 1px solid #FF2E63;
+}
+
+.button {
+  width: 5rem;
+  height: auto;
+  color: #EAEAEA;
+  background-color: #FF2E63;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.button:hover {
+  color: #FF2E63;
+  background-color: #EAEAEA;
+  border: 1px solid #FF2E63;
+}
+
+@media screen and (min-width: 768px) and (max-width: 912px) {
+  #custom-size {
+    font-size: 12px;
+  }
+
+  #custom-size {
+    font-size: 12px;
+  }
+
+  .poster > a > img {
+    width: 12rem;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #logoNavbar {
+    margin: auto;
+  }
+
+  #inputSearchBar {
+    width: 16rem;
+    height: auto;
+  }
+  
+  .poster > a > img {
+    width: 14rem;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #logoNavbar {
+    margin: auto;
+  }
+
+  #inputSearchBar {
+    width: 10rem;
+    height: auto;
+    border: 1px solid #FF2E63;
+    font-size: 0.7rem;
+  }
+
+  #upperSection {
+    padding: 2rem;
+  }
+
+  .poster > a > img {
+    width: 8rem;
+    height: auto;
+  }
+
+  ul > li {
+    width: 100px; 
+    height: auto;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  
+  button {
+    font-size: 0.7rem;
+  }
+
+  #custom-size {
+    font-size: 60%;
+  }
+
+  #searchResult  {
+    margin: 0;
+  }
+}
